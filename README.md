@@ -1,5 +1,7 @@
 # Dawn - React 学习脚手架
 
+[React中文文档](https://zh-hans.react.dev/)
+
 一个完整配置的 React 学习项目，使用现代技术栈：React Router + Tailwind CSS + shadcn/ui + ESLint
 
 ## 🎯 项目特性

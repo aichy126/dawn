@@ -1,7 +1,41 @@
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
 
+function arrayfor() {
+  let arr = [1, 2, 3, 4, 5];
+  // arr.forEach((item) => {
+  //   console.log(item);
+  // });
+  arr.forEach((one) => {
+    console.log(one)
+  })
+}
+
+
+function box(name:string, age:number) {
+  return name + " " + age;
+}
+
 export function Welcome() {
+  let msg = ()=> "hello world";
+  let sum1 = (x: number, y: number) => x + y;
+  console.log(sum1(1, 2));
+  console.log(box("name", 18));
+  console.log(msg());
+  let month = new Date().getMonth();
+  console.log(month)
+  try {
+    console.log("1");
+
+  } catch (error) {
+    console.log("2");
+
+  }
+  finally {
+    console.log("3");
+  }
+  arrayfor();
+
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
@@ -22,7 +56,7 @@ export function Welcome() {
         <div className="max-w-[300px] w-full space-y-6 px-4">
           <nav className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
             <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">
-              What&apos;s next?
+              What&apos;s next?111
             </p>
             <ul>
               {resources.map(({ href, text, icon }) => (
