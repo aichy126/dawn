@@ -1,6 +1,29 @@
 import { useState } from "react";
+import { S03Advanced } from "./s03-advanced";
 
-// 学习目标: 自定义 Hook - 逻辑复用
+// 涵盖学习目标
+
+// ✅ 自定义 Hook - 逻辑复用 (核心)
+// ✅ 组件定义 - 函数式组件
+// ✅ JSX 语法 - HTML-like 语法
+// ✅ Props - 组件间数据传递
+// ✅ TypeScript - 类型定义和约束
+// ✅ useState Hook - 状态管理
+// ✅ 事件处理 - onClick
+// ✅ 条件渲染 - if 判断
+// ✅ 列表渲染 - map() 方法
+// ✅ Fragment - <> </>
+// ✅ 状态提升 - 父组件管理子组件状态
+
+// 未涵盖学习目标
+// 🔲 useEffect - 副作用处理
+// 🔲 Context API - 跨组件状态共享
+// 🔲 useReducer - 复杂状态管理
+// 🔲 组件生命周期
+// 🔲 性能优化 - useMemo, useCallback
+// 🔲 表单处理 - 表单验证
+// 🔲 HTTP 请求 - fetch API
+// 🔲 错误边界 - Error Boundaries
 
 // 🎯 自定义 Hook: 简单计数器
 function useCounter() {
@@ -39,6 +62,22 @@ function Counter2() {
 }
 
 export default function S03() {
+  const [showAdvanced, setShowAdvanced] = useState(false);
+
+  if (showAdvanced) {
+    return (
+      <div>
+        <button 
+          onClick={() => setShowAdvanced(false)}
+          className="mb-4 bg-gray-500 text-white px-4 py-2"
+        >
+          ← 回到基础版
+        </button>
+        <S03Advanced />
+      </div>
+    );
+  }
+
   return (
     <>
       <h1 className="text-3xl font-bold">🎣 自定义 Hook</h1>
@@ -54,6 +93,13 @@ export default function S03() {
         <p>• useCounter() 是自定义 Hook</p>
         <p>• 两个组件使用同一个 Hook</p>
         <p>• 但它们的状态是独立的</p>
+        
+        <button 
+          onClick={() => setShowAdvanced(true)}
+          className="mt-3 bg-blue-500 text-white px-4 py-2"
+        >
+          看高级版：如何统一控制? →
+        </button>
       </div>
     </>
   );
