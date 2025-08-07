@@ -1,7 +1,5 @@
 # Dawn - React 学习脚手架
 
-[React中文文档](https://zh-hans.react.dev/)
-
 一个完整配置的 React 学习项目，使用现代技术栈：React Router + Tailwind CSS + shadcn/ui + ESLint
 
 ## 🎯 项目特性
@@ -163,6 +161,7 @@ docker run -p 3000:3000 dawn-app
 ## 📖 学习资源
 
 - [React 官方文档](https://react.dev/)
+- [React 官方中文文档](https://zh-hans.react.dev/)
 - [React Router 文档](https://reactrouter.com/)
 - [Tailwind CSS 文档](https://tailwindcss.com/)
 - [shadcn/ui 组件库](https://ui.shadcn.com/)
